@@ -11,14 +11,58 @@
     <script src="/scripts/script-index.js"></script>
   </head>
   <body>
+    <!--------------------------NAVBAR------------------------------>
+
     <nav class="navbar">
-      <div class="logo"><h3>KnowMyNation</h3></div>
-      <div class="nav-items"><a href="#main">View India</a></div>
+      <div class="nav-logo"><h3>KnowMyNation</h3></div>
+      <div class="nav-items">
+        <a href="#main">View India</a>
+        <a href="Pages/news.html">News</a>
+        <a href="Pages/states.html">States</a>
+        <a href="Pages/unionterri.html">Union-Territories</a>
+        <a href="">Climate</a>
+      </div>
+
       <div class="theme"></div>
     </nav>
 
+    <!--------------------------INTR0------------------------------>
+    <div class="intro">
+      <h1 class="logo-header">
+        <span class="logo"> Know </span><span class="logo"> My </span
+        ><span class="logo"> Nation </span>
+      </h1>
+      <script>
+        let intro = document.querySelector(".intro");
+        let logo = document.querySelector(".logo-header");
+        let logospan = document.querySelectorAll(".logo");
+        window.addEventListener("DOMContentLoaded", () => {
+          setTimeout(() => {
+            logospan.forEach((span, idx) => {
+              setTimeout(() => {
+                span.classList.add("active");
+              }, (idx + 2) * 400);
+            });
+            setTimeout(() => {
+              logospan.forEach((span, idx) => {
+                setTimeout(() => {
+                  span.classList.remove("active");
+                  span.classList.add("fade");
+                }, (idx + 2) * 50);
+              });
+            }, 2500);
+            setTimeout(() => {
+              intro.style.top = "-100vh";
+            }, 2800);
+          });
+        });
+      </script>
+    </div>
+
     <div class="circle1"></div>
     <div class="circle2"></div>
+
+    <!--------------------------LANDING SECTION------------------------------>
 
     <section class="landing">
       <div class="land-left">
@@ -33,6 +77,8 @@
         <div class="land-img land-img3"></div>
       </div>
     </section>
+
+    <!--------------------------MAIN SECTION------------------------------>
 
     <section id="main">
       <div class="map">
