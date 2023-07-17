@@ -22,6 +22,23 @@
     #cc4499 100%
   );
   /*--gradient-color2 : */
+  --primary-backgorund: #f5f5f5;
+  --secondary-background: #f9f9f9;
+  --card-background: rgba(249, 249, 249, 0.6);
+  --dark-text: #03001c;
+  --card-border: #f9f9f9;
+  --shadow: rgba(17, 12, 46, 0.15);
+}
+
+/*-------------------DARK THEME VARIABLES----------------*/
+
+.dark-mode {
+  --primary-background: #03001c;
+  --secondary-background: #100e1c;
+  --card-background: rgba(15, 14, 28, 0.6);
+  --dark-text: #f5f5f5;
+  --card-border: #100e1c;
+  --shadow: rgba(17, 12, 46, 0.15);
 }
 
 * {
@@ -35,10 +52,11 @@ html {
   overflow-x: hidden;
 }
 body {
-  background-color: var(--light1-background);
+  background-color: var(--primary-background);
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  font-family: "Geologica", sans-serif;
 }
 
 /*   NAV STYLING STARTS  */
@@ -46,7 +64,7 @@ body {
 .navbar {
   width: 100%;
   height: 65px;
-  background-color: var(--light2-background);
+  background-color: var(--secondary-background);
   box-shadow: var(--dark-shadow) 0 1px 50px 1px;
   display: flex;
   justify-content: space-between;
@@ -62,7 +80,7 @@ body {
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 1px;
-  color: var(--dark1-background);
+  color: var(--secondary-background);
   background: #ef32d9; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -143,6 +161,13 @@ body {
   background-clip: text;
 }
 
+.theme-toggler {
+  font-size: 30px;
+  padding: 0 15px 0 0;
+  color: var(--dark-text);
+  cursor: pointer;
+}
+
 /*   NAV STYLING ENDS  */
 
 /*LANDING SECTION STYLING STARTS*/
@@ -189,11 +214,11 @@ body {
 .text-india {
   font-family: "Bebas Neue", sans-serif;
 
-  text-shadow: 2px 2px 10px white;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   font-size: 30px;
   font-weight: 500;
   letter-spacing: 8px;
-  z-index: 3;
+  z-index: 4;
   background: rgb(255, 103, 31);
   background: linear-gradient(
     149deg,
@@ -298,9 +323,9 @@ body {
   );
 
   position: absolute;
-  top: 15px;
+  top: 7px;
   left: 11%;
-  filter: blur(130px);
+  filter: blur(150px);
 }
 
 .circle2 {
@@ -314,6 +339,21 @@ body {
   border-radius: 100%;
   filter: blur(125px);
   z-index: -1;
+}
+
+#statename {
+  position: relative;
+  height: max-content;
+  width: max-content;
+  border-radius: 15px;
+  color: var(--dark-text);
+  box-shadow: 0 0 20px var(--shadow);
+  padding: 5px 30px;
+  margin: 0 50px;
+  top: 100px;
+
+  background-color: var(--card-background);
+  margin-left: 60%;
 }
 
 /*=========================== MEDIA QUERIES TABLETS===============================*/
@@ -336,6 +376,12 @@ body {
   .map {
     width: 80%;
   }
+
+  #statename {
+    margin-left: 20px;
+    top: 0px;
+    text-align: center;
+  }
 }
 
 /*=========================== MEDIA QUERIES MOBILES===============================*/
@@ -354,6 +400,11 @@ body {
 
   .land-img {
     height: 90px;
+  }
+  #statename {
+    top: 0px;
+    text-align: center;
+    font-size: 12px;
   }
 }
 
@@ -385,7 +436,7 @@ body {
 .intro {
   font-family: "Poppins", sans-serif;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   left: 0;
   top: 0;
   width: 100%;
@@ -438,8 +489,12 @@ body {
   width: 300px;
   height: 200px;
   padding: 20px;
-  background-image: url(https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHdlYXRoZXJ8ZW58MHx8MHx8fDA%3D&w=1000&q=80);
   border: 1px solid #ccc;
   border-radius: 10px;
-  z-index: 9999;
+}
+
+@media screen and (max-width: 380px) {
+  .logo-header {
+    font-size: 25px;
+  }
 }

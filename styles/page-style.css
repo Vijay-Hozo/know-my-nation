@@ -10,8 +10,25 @@
   --dark2-background: #100e1c;
   --dark-card-background: rgba(15, 14, 28, 0.6);
   --light-card-background: rgba(249, 249, 249, 0.6);
+
+  --primary-backgorund: #f5f5f5;
+  --secondary-background: #f9f9f9;
+  --card-background: rgba(249, 249, 249, 0.6);
+  --dark-text: #03001c;
+  --card-border: #f9f9f9;
+  --shadow: rgba(17, 12, 46, 0.15);
 }
 
+/*---------------DARK THEME VARIABLES-----------------*/
+
+.dark-mode {
+  --primary-background: #03001c;
+  --secondary-background: #100e1c;
+  --card-background: rgba(15, 14, 28, 0.6);
+  --dark-text: #f5f5f5;
+  --card-border: #100e1c;
+  --shadow: rgba(17, 12, 46, 0.15);
+}
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -26,7 +43,7 @@ body {
   grid-template-columns: 400px 1fr;
   grid-template-rows: 60px 1fr;
   font-family: "Geologica", sans-serif;
-  background-color: var(--dark1-background); /*BODY BACKGROUND COLOR CHANGE*/
+  background-color: var(--primary-background); /*BODY BACKGROUND COLOR CHANGE*/
   color: var(--light2-background); /*TEXT COLOR CHANGE*/
 }
 
@@ -73,6 +90,9 @@ HEADER SLYLING
   width: 100%;
   right: 0;
   height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header h3 {
@@ -99,6 +119,13 @@ HEADER SLYLING
   background-clip: text;
 }
 
+.theme-toggler {
+  font-size: 30px;
+  padding: 0 15px 0 0;
+  color: var(--dark-text);
+  cursor: pointer;
+}
+
 /*=========================
 SIDE BAR SLYLING
 ===========================*/
@@ -113,8 +140,8 @@ SIDE BAR SLYLING
   width: 400px;
   height: 100vh;
   position: fixed;
-  background-color: var(--dark2-background); /*SIDEBAR COLOR*/
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+  background-color: var(--secondary-background); /*SIDEBAR COLOR*/
+  box-shadow: rgba(50, 50, 93, 0.5) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
@@ -149,7 +176,7 @@ SIDE BAR SLYLING
   font-size: 35px;
   margin-left: 0;
   padding-left: 15px;
-  z-index: 2;
+  z-index: 4;
 }
 
 .sidebar-top-p-shadow {
@@ -159,6 +186,10 @@ SIDE BAR SLYLING
   top: 150px;
   box-shadow: rgba(0, 0, 0, 0.55) 0px -50px 36px -28px inset;
   z-index: 4;
+}
+
+.climate {
+  color: var(--dark-text);
 }
 
 /*CAROUSEL */
@@ -339,13 +370,14 @@ Main BAR SLYLING
   padding-bottom: 20px;
   overflow: hidden;
 
-  background: var(--dark-card-background); /*CARD COLOR*/
+  color: var(--dark-text);
+  background: var(--card-background); /*CARD COLOR*/
 
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   border-radius: 10px;
-  border: 1px solid var(--dark2-background); /*CARD BORDER COLOR CHANGE*/
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: 1px solid var(--card-border); /*CARD BORDER COLOR CHANGE*/
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 .card:nth-child(1) {
@@ -441,13 +473,14 @@ Main BAR SLYLING
   #sidebar-top p {
     font-size: 22px;
     top: 120px;
+    z-index: 5;
   }
 
   .sidebar-top-p-shadow {
     height: 50px;
     width: 300px;
     position: absolute;
-    top: 132px;
+    top: 130px;
     box-shadow: rgba(0, 0, 0, 0.55) 0px -50px 36px -28px inset;
     z-index: 4;
   }
@@ -474,7 +507,7 @@ Main BAR SLYLING
   }
 
   .sidebar {
-    left: -400px;
+    left: -100%;
     width: 400px;
     z-index: 4;
   }
@@ -501,16 +534,28 @@ Main BAR SLYLING
   }
 
   .sidebar.active {
-    left: 0;
     box-shadow: 2px 2px 15px var(--dark1-background);
+    animation: showMenu 400ms ease forwards;
   }
+
+  @keyframes showMenu {
+    to {
+      left: 0;
+    }
+  }
+
+  .header-right {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   #toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    margin-right: 10px;
     width: 40px;
     height: 40px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: var(--card-background);
     border-radius: 10px;
     cursor: pointer;
     display: flex;
@@ -524,7 +569,7 @@ Main BAR SLYLING
     width: 24px;
     height: 4px;
     border-radius: 2rem;
-    background-color: #fff;
+    background-color: var(--dark-text);
     transform: translateY(-5px);
     transition: 0.2s;
   }
@@ -535,7 +580,7 @@ Main BAR SLYLING
     width: 24px;
     height: 4px;
     border-radius: 2rem;
-    background-color: #fff;
+    background-color: var(--dark-text);
     transform: translateY(5px);
     transition: 0.2s;
   }
@@ -566,5 +611,6 @@ Main BAR SLYLING
   #sidebar-top p {
     top: 180px;
     font-size: 25px;
+    z-index: 4;
   }
 }

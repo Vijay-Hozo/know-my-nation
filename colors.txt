@@ -1,0 +1,6 @@
+--primary-background:#03001c;
+--secondary-background: #100e1c;
+--card-background: rgba(15, 14, 28, 0.6);
+--dark-text: #f5f5f5;
+--card-border: #100e1c;
+--shadow: rgba(17, 12, 46, 0.15);

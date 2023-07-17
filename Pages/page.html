@@ -23,6 +23,28 @@
       </div>
       <div class="header-right">
         <div id="toggle"></div>
+        <div class="theme-toggler">
+          <i class="bi bi-sun-fill" id="toggleicon"></i>
+        </div>
+        <script>
+          const toggle = document.getElementById("toggleicon");
+          const body = document.querySelector("body");
+          const sidebar = document.getElementById("sidebar");
+
+          toggle.addEventListener("click", function () {
+            this.classList.toggle("bi-moon-fill");
+
+            if (this.classList.toggle("bi-sun-fill")) {
+              body.classList.remove("dark-mode");
+              body.style.transition = "300ms";
+              sidebar.style.transition = "400ms";
+            } else {
+              body.classList.add("dark-mode");
+              body.style.transition = "300ms";
+              sidebar.style.transition = "400ms";
+            }
+          });
+        </script>
       </div>
     </header>
     <!--Header End-->
