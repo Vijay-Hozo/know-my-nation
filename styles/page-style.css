@@ -361,7 +361,8 @@ Main BAR SLYLING
   grid-template-areas:
     "c1 c1 c2"
     "c3 c4 c4"
-    "c6 c6 c5";
+    "c6 c6 c5"
+    "c7 c7 c8";
 }
 
 .card {
@@ -398,6 +399,14 @@ Main BAR SLYLING
 
 .card:nth-child(6) {
   grid-area: c6;
+}
+
+.card:nth-child(7) {
+  grid-area: c7;
+}
+
+.card:nth-child(8) {
+  grid-area: c8;
 }
 
 .card h2 {
@@ -465,14 +474,14 @@ Main BAR SLYLING
     width: 300px;
   }
   #sidebar-top img {
-    width: 300px;
-    height: 180px;
+    width: 400px;
+    height: 300px;
     border-radius: 0 1rem 0 0;
   }
 
   #sidebar-top p {
     font-size: 22px;
-    top: 120px;
+    top: 180px;
     z-index: 5;
   }
 
@@ -480,7 +489,7 @@ Main BAR SLYLING
     height: 50px;
     width: 300px;
     position: absolute;
-    top: 130px;
+    top: 200px;
     box-shadow: rgba(0, 0, 0, 0.55) 0px -50px 36px -28px inset;
     z-index: 4;
   }
@@ -514,7 +523,7 @@ Main BAR SLYLING
 
   #sidebar-top img {
     width: 400px;
-    height: 250px;
+    height: 300px;
     border-radius: 0 1rem 0 0;
   }
 

@@ -74,7 +74,7 @@ function filterData(stateId) {
 
       queryParams.set(
         "state_festivals",
-        filteredData.culture_and_symbols.major_festivals
+        JSON.stringify(filteredData.culture_and_symbols.major_festivals)
       );
 
       queryParams.set(
@@ -83,6 +83,11 @@ function filterData(stateId) {
       );
 
       queryParams.set("state_website", filteredData.websiteurl);
+
+      queryParams.set(
+        "state_industries",
+        JSON.stringify(filteredData.economy.major_industries)
+      );
 
       // Sending Data Ends...
       const url = "/Pages/page.html?" + queryParams.toString();

@@ -1,0 +1,228 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+:root {
+  --light1-background: #f5f5f5;
+  --light2-background: #f9f9f9;
+  --purple: #810ca8;
+  --dark1-background: #03001c;
+  --dark2-background: #100e1c;
+  --dark-card-background: rgba(15, 14, 28, 0.6);
+  --light-card-background: rgba(249, 249, 249, 0.6);
+  --dark-shadow: rgba(255, 255, 255, 0.23);
+  --dark-mapfill: rgba(255, 255, 255, 0.9);
+  --gradient-color1: linear-gradient(
+    319deg,
+    #663dff 0%,
+    #aa00ff 37%,
+    #cc4499 100%
+  );
+  /*--gradient-color2 : */
+  --primary-backgorund: #f5f5f5;
+  --secondary-background: #f9f9f9;
+  --card-background: rgba(249, 249, 249, 0.6);
+  --dark-text: #03001c;
+  --card-border: #f9f9f9;
+  --shadow: rgba(17, 12, 46, 0.15);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-background);
+}
+
+nav {
+  box-shadow: 1px 1px 10px var(--shadow);
+}
+.card {
+  width: 90%;
+  max-width: 470px;
+  background-color: var(--primary-background);
+  color: var(--dark-text);
+  margin: 100px auto 0;
+  border-radius: 20px;
+  padding: 40px 35px;
+  text-align: center;
+  box-shadow: 1px 2px 15px rgba(17, 12, 46, 0.15);
+}
+
+.search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search input {
+  border: 0;
+  outline: 0;
+  background: #ebfffc;
+  color: var(--dark-text);
+  padding: 10px 25px;
+  height: 60px;
+  border-radius: 30px;
+  margin-right: 16px;
+  font-size: 18px;
+  flex: 1;
+}
+
+.search button {
+  border: 0;
+  outline: 0;
+  background: #ebfffc;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.search button img {
+  width: 16px;
+}
+
+.weather-icon {
+  width: 170px;
+  margin-top: 30px;
+}
+
+.weather h1 {
+  font-size: 60px;
+  font-weight: 500;
+}
+
+.weather h2 {
+  font-size: 45px;
+  font-weight: 400;
+  margin-top: -10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-top: 50px;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.col i {
+  font-size: 50px;
+  margin-right: 10px;
+  padding-right: 5px;
+}
+
+.humidity,
+.wind {
+  font-size: 28px;
+  margin: -6px;
+}
+
+.weather {
+  display: none;
+}
+
+.error {
+  text-align: left;
+  margin-left: 10px;
+  font-size: 14px;
+  margin-top: 10px;
+  display: none;
+}
+
+.circle1 {
+  height: 250px;
+  width: 250px;
+  z-index: -1;
+  background-color: #663dff;
+  background-image: linear-gradient(
+    319deg,
+    #663dff 0%,
+    #aa00ff 37%,
+    #cc4499 100%
+  );
+
+  position: absolute;
+  top: 7px;
+  left: 11%;
+  filter: blur(150px);
+}
+
+.circle2 {
+  height: 250px;
+  width: 250px;
+  background-color: #1fd1f9;
+  background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  position: absolute;
+  top: 70%;
+  left: 60%;
+  border-radius: 100%;
+  filter: blur(125px);
+  z-index: -1;
+}
+
+.col p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.dark-mode {
+  --primary-background: #03001c;
+  --secondary-background: #100e1c;
+  --card-background: rgba(15, 14, 28, 0.6);
+  --dark-text: #f5f5f5;
+  --card-border: #100e1c;
+  --shadow: rgba(17, 12, 46, 0.15);
+}
+
+.theme-toggler {
+  font-size: 30px;
+  /*padding: 0 15px 0 0;*/
+  color: var(--dark-text);
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-right: 12px;
+}
+
+.navbar {
+  width: 100%;
+  height: 65px;
+  background-color: var(--primary-background);
+  box-shadow: var(--dark-shadow) 0 1px 50px 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo h3 {
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  letter-spacing: 1px;
+  background-color: #1fd1f9;
+  background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  font-family: "Yellowtail", cursive;
+  font-size: 25px;
+  max-width: max-content;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /*Mozilla*/
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  /*Microsoft*/
+  -ms-background-clip: text;
+  -ms-text-fill-color: transparent;
+  /*Opera*/
+  -o-background-clip: text;
+  -o-text-fill-color: transparent;
+  background-clip: text;
+}

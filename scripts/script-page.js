@@ -31,19 +31,8 @@ window.addEventListener("DOMContentLoaded", () => {
   const state_climate = queryParams.get("state_climate");
   const state_history = queryParams.get("state_history");
   const state_website = queryParams.get("state_website");
-
+  const state_industries = queryParams.get("state_industries");
   const state_festivals = queryParams.get("state_festivals");
-
-  var card_festival = document.getElementById("festival-card");
-  var list_festival = document.getElementById("festival-list");
-  /*.forEach(function (item) {
-    var listitem_festival = document.createElement("li");
-
-    listitem_festival.textContent = item;
-    listitem_festival.appendChild(listitem_festival);
-  });
-
-  card_festival.appendChild(listitem_festival);*/
 
   //...Receiving Data Ends
 
@@ -67,11 +56,28 @@ window.addEventListener("DOMContentLoaded", () => {
   document.getElementById("statesong").textContent = state_song;
   document.getElementById("stateclimate").textContent = state_climate;
   document.getElementById("statehistory").textContent = state_history;
-  //document.getElementById("festival-list").textContent = state_festivals;
+  // document.getElementById("festival-list").textContent = state_festivals;
   document.getElementById("websitelink").href = state_website;
 
   const carouselImage = document.getElementById("carousel-image");
 
+  const indus_arr = JSON.parse(state_industries);
+
+  const p_container = document.getElementById("indus-card");
+  indus_arr.forEach((element) => {
+    const ptag = document.createElement("p");
+    ptag.innerHTML = element;
+    p_container.appendChild(ptag);
+  });
+
+  const festi_arr = JSON.parse(state_festivals);
+
+  const p1_container = document.getElementById("festi-card");
+  festi_arr.forEach((element) => {
+    const ptag1 = document.createElement("p");
+    ptag1.innerHTML = element;
+    p1_container.appendChild(ptag1);
+  });
   const images = JSON.parse(state_imgs);
   let currentIndex = 0;
   function changeImage() {
