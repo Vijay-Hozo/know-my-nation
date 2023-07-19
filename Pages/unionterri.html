@@ -1,78 +1,94 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<link
-  rel="stylesheet"
-  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-  crossorigin="anonymous"
-/>
-
-<style>
-  th {
-    cursor: pointer;
-    color: #fff;
-  }
-</style>
-
-<div class="row">
-  <div class="col">
-    <div class="card card-body">
-      <input id="search-input" class="form-control" type="text" />
-    </div>
-  </div>
-</div>
-
-<table class="table table-striped">
-  <tr class="bg-info">
-    <th class="bg-info" data-colname="name" data-order="desc">Name</th>
-  </tr>
-  <tbody id="myTable"></tbody>
-</table>
-
-<script>
-  var myArray = [
-    { name: "Andaman and Nicobar Islands" },
-    { name: "Chandigarh" },
-    { name: "Daman and Diu" },
-    { name: "Dadar and Nagar Haveli" },
-    { name: "Delhi" },
-    { name: "Jammu and kashmir" },
-    { name: "Ladakh" },
-    { name: "Lakshadweep" },
-    { name: "Puducherry" },
-  ];
-
-  $("#search-input").on("keyup", function () {
-    var value = $(this).val();
-    console.log("value:", value);
-    var data = searchTable(value, myArray);
-    buildTable(data);
-  });
-
-  buildTable(myArray);
-
-  function searchTable(value, data) {
-    var filteredData = [];
-
-    for (var i = 0; i < data.length; i++) {
-      value = value.toLowerCase();
-      var name = data[i].name.toLowerCase();
-
-      if (name.includes(value)) {
-        filteredData.push(data[i]);
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Union-Territories</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="/scripts/script-table.js"></script>
+    <style>
+      th {
+        cursor: pointer;
+        color: #fff;
       }
-    }
 
-    return filteredData;
-  }
+      td {
+        text-decoration: none;
+        cursor: pointer;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col">
+        <div class="card card-body">
+          <input id="search-input" class="form-control" type="text" />
+        </div>
+      </div>
+    </div>
 
-  function buildTable(data) {
-    var table = document.getElementById("myTable");
-    table.innerHTML = "";
-    for (var i = 0; i < data.length; i++) {
-      var row = `<tr>
-                        <td><a href="">${data[i].name}</a></td>
+    <table class="table table-striped">
+      <tr class="bg-info">
+        <th class="bg-info" data-colname="name" data-order="desc">Name</th>
+      </tr>
+      <tbody id="myTable"></tbody>
+    </table>
+
+    <script>
+      var myArray = [
+        { name: ["Andaman and Nicobar Islands", 31] },
+        { name: ["Chandigarh", 32] },
+        { name: ["Daman and Diu", 39] },
+        { name: ["Dadar and Nagar Haveli", 33] },
+        { name: ["Delhi", 34] },
+        { name: ["Jammu and kashmir", 45] },
+        { name: ["Ladakh", 36] },
+        { name: ["Lakshadweep", 37] },
+        { name: ["Puducherry", 38] },
+      ];
+
+      $("#search-input").on("keyup", function () {
+        var value = $(this).val();
+        console.log("value:", value);
+        var data = searchTable(value, myArray);
+        buildTable(data);
+      });
+
+      buildTable(myArray);
+
+      function searchTable(value, data) {
+        var filteredData = [];
+
+        for (var i = 0; i < data.length; i++) {
+          value = value.toLowerCase();
+          var name = data[i].name.toLowerCase();
+
+          if (name.includes(value)) {
+            filteredData.push(data[i]);
+          }
+        }
+
+        return filteredData;
+      }
+
+      function buildTable(data) {
+        var table = document.getElementById("myTable");
+        table.innerHTML = "";
+        for (var i = 0; i < data.length; i++) {
+          var row = `<tr>
+                        <td><a onclick="filterDatatable(${data[i].name[1]})">${data[i].name[0]}</a></td>
                    </tr>`;
-      table.innerHTML += row;
-    }
-  }
-</script>
+          table.innerHTML += row;
+        }
+      }
+    </script>
+  </body>
+</html>

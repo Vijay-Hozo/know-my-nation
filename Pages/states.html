@@ -1,106 +1,117 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<link
-  rel="stylesheet"
-  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-  crossorigin="anonymous"
-/>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/scripts/script-table.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
 
-<style>
-  th {
-    cursor: pointer;
-    color: #fff;
-  }
-
-  .table-data {
-    text-decoration: none;
-    color: black;
-  }
-</style>
-
-<div class="row">
-  <div class="col">
-    <div class="card card-body">
-      <input id="search-input" class="form-control" type="text" />
-    </div>
-  </div>
-</div>
-
-<table class="table table-striped">
-  <tr class="bg-info">
-    <th class="info" data-colname="name" data-order="desc">Name</th>
-  </tr>
-  <tbody id="myTable"></tbody>
-</table>
-
-<script>
-  var myArray = [
-    {
-      name: "Andhra Pradesh",
-      url: "http://127.0.0.1:3000/page.html?state_name=Tamil+Nadu&state_imgs=%5B%22https%3A%2F%2Fimages.unsplash.com%2Fphoto-1582510003544-4d00b7f74220%3Fixlib%3Drb-4.0.3%26ixid%3DM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D%26auto%3Dformat%26fit%3Dcrop%26w%3D1170%26q%3D80%22%2C%22https%3A%2F%2Fimages.unsplash.com%2Fphoto-1573043576848-56250cd36770%3Fixlib%3Drb-4.0.3%26ixid%3DM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D%26auto%3Dformat%26fit%3Dcrop%26w%3D1334%26q%3D80%22%2C%22https%3A%2F%2Fimages.unsplash.com%2Fphoto-1676465997765-4e37e9da8cde%3Fixlib%3Drb-4.0.3%26ixid%3DM3wxMjA3fDB8MHxzZWFyY2h8MzZ8fHRhbWlsJTIwbmFkdSUyMG1haGFiYWxpcHVyYW18ZW58MHx8MHx8fDA%253D%26auto%3Dformat%26fit%3Dcrop%26w%3D500%26q%3D60%22%2C%22https%3A%2F%2Fimages.unsplash.com%2Fphoto-1663349405799-2883f8e59291%3Fixlib%3Drb-4.0.3%26ixid%3DM3wxMjA3fDB8MHxzZWFyY2h8OHx8dGFtaWwlMjBuYWR1JTIwbW9udW1lbnRzfGVufDB8fDB8fHww%26auto%3Dformat%26fit%3Dcrop%26w%3D500%26q%3D60%22%2C%22https%3A%2F%2Fimages.unsplash.com%2Fphoto-1596295357308-b9ff1d2fe788%3Fixlib%3Drb-4.0.3%26ixid%3DM3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHRhbWlsJTIwbmFkdXxlbnwwfHwwfHx8MA%253D%253D%26auto%3Dformat%26fit%3Dcrop%26w%3D900%26q%3D60%22%5D&state_maplink=https%3A%2F%2Fmaps.app.goo.gl%2FtLBi8769fWEj1Cc79&state_capital=Chennai&state_cm=M.K.+Stalin&state_governor=R.N.Ravi&state_districts=38&state_populations=77841267&state_area=130060&state_literacy=80.33&state_gdp=%24320+billion&state_symbol=Gopuram&state_animal=Nilgiri+tahr&state_bird=Emerald+Dove&state_flower=Gloriosa+Lily&state_motto=%E0%AE%B5%E0%AE%BE%E0%AE%B4%E0%AF%8D%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%88+%E0%AE%B5%E0%AE%B3%E0%AE%B0%E0%AF%8D%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%88+%E0%AE%A4%E0%AE%AE%E0%AE%BF%E0%AE%B4%E0%AE%B0%E0%AF%8D%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%87+%28Life+Prosperity+for+Tamils&state_song=%E0%AE%A4%E0%AE%AE%E0%AE%BF%E0%AE%B4%E0%AF%8D+%E0%AE%A4%E0%AF%87%E0%AE%9A%E0%AE%BF%E0%AE%AF+%E0%AE%AE%E0%AE%BE%E0%AE%B2%E0%AF%88+%28Tamil+Thai+Valthu%29&state_climate=Tropical&state_festivals=Pongal%2CDiwali%2CNavaratri%2CTamil+New+Year&state_history=Rich+history+dating+back+to+ancient+Tamil+kingdoms&state_website=https%3A%2F%2Fwww.tn.gov.in%2F&state_school=10000&state_college=500",
-    },
-    { name: "Arunachal Pradesh" },
-    { name: "Assam" },
-    { name: "Bihar" },
-    { name: "Chhatisgarh" },
-    { name: "Goa" },
-    { name: "Gujarat" },
-    { name: "Haryana" },
-    { name: "Himachal Pradesh" },
-    { name: "Jharkhand" },
-    { name: "Karnataka" },
-    { name: "Kerala" },
-    { name: "Madhya Pradesh" },
-    { name: "Maharshtra" },
-    { name: "Manipur" },
-    { name: "Meghalaya" },
-    { name: "Mizoram" },
-    { name: "Nagaland" },
-    { name: "Odisha" },
-    { name: "Punjab" },
-    { name: "Rajasthan" },
-    { name: "Sikkim" },
-    { name: "Tamil Nadu" },
-    { name: "Telangana" },
-    { name: "Tripura" },
-    { name: "Uttar Pradesh" },
-    { name: "Uttarakhand" },
-    { name: "West Bengal" },
-  ];
-
-  $("#search-input").on("keyup", function () {
-    var value = $(this).val();
-    console.log("value:", value);
-    var data = searchTable(value, myArray);
-    buildTable(data);
-  });
-
-  buildTable(myArray);
-
-  function searchTable(value, data) {
-    var filteredData = [];
-
-    for (var i = 0; i < data.length; i++) {
-      value = value.toLowerCase();
-      var name = data[i].name.toLowerCase();
-
-      if (name.includes(value)) {
-        filteredData.push(data[i]);
+    <style>
+      th {
+        cursor: pointer;
+        color: #fff;
       }
-    }
 
-    return filteredData;
-  }
+      .table-data {
+        text-decoration: none;
+        cursor: pointer;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col">
+        <div class="card card-body">
+          <input id="search-input" class="form-control" type="text" />
+        </div>
+      </div>
+    </div>
 
-  function buildTable(data) {
-    var table = document.getElementById("myTable");
-    table.innerHTML = "";
-    for (var i = 0; i < data.length; i++) {
-      var row = `<tr>
-                        <td><a href="" class="table-data">${data[i].name}</a></td>
+    <table class="table table-striped">
+      <tr class="bg-info">
+        <th class="info" data-colname="name" data-order="desc">Name</th>
+      </tr>
+      <tbody id="myTable"></tbody>
+    </table>
+
+    <script>
+      var myArray = [
+        {
+          name: ["Andhra Pradesh", 6],
+        },
+        { name: ["Arunachal Pradesh", 7] },
+        { name: ["Assam", 8] },
+        { name: ["Bihar", 9] },
+        { name: ["Chhatisgarh", 10] },
+        { name: ["Goa", 11] },
+        { name: ["Gujarat", 28] },
+        { name: ["Haryana", 5] },
+        { name: ["Himachal Pradesh", 12] },
+        { name: ["Jharkhand", 13] },
+        { name: ["Karnataka", 14] },
+        { name: ["Kerala", 4] },
+        { name: ["Madhya Pradesh", 15] },
+        { name: ["Maharshtra", 2] },
+        { name: ["Manipur", 16] },
+        { name: ["Meghalaya", 17] },
+        { name: ["Mizoram", 18] },
+        { name: ["Nagaland", 19] },
+        { name: ["Odisha", 20] },
+        { name: ["Punjab", 21] },
+        { name: ["Rajasthan", 3] },
+        { name: ["Sikkim", 22] },
+        { name: ["Tamil Nadu", 1] },
+        { name: ["Telangana", 23] },
+        { name: ["Tripura", 24] },
+        { name: ["Uttar Pradesh", 25] },
+        { name: ["Uttarakhand", 26] },
+        { name: ["West Bengal", 27] },
+      ];
+
+      $("#search-input").on("keyup", function () {
+        var value = $(this).val();
+        console.log("value:", value);
+        var data = searchTable(value, myArray);
+        buildTable(data);
+      });
+
+      buildTable(myArray);
+
+      function searchTable(value, data) {
+        var filteredData = [];
+
+        for (var i = 0; i < data.length; i++) {
+          value = value.toLowerCase();
+          var name = data[i].name.toLowerCase();
+
+          if (name.includes(value)) {
+            filteredData.push(data[i]);
+          }
+        }
+
+        return filteredData;
+      }
+
+      function buildTable(data) {
+        var table = document.getElementById("myTable");
+        table.innerHTML = "";
+        for (var i = 0; i < data.length; i++) {
+          var row = `<tr>
+                        <td><a onclick="filterDatatable(${data[i].name[1]})" class="table-data">${data[i].name[0]}</a></td>
                         
                    </tr>`;
-      table.innerHTML += row;
-    }
-  }
-</script>
+          table.innerHTML += row;
+        }
+      }
+    </script>
+  </body>
+</html>

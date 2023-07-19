@@ -59,9 +59,14 @@ body {
   font-family: "Geologica", sans-serif;
 }
 
+.lak {
+  fill: #03001c;
+}
+
 /*   NAV STYLING STARTS  */
 
 .navbar {
+  z-index: 20;
   width: 100%;
   height: 65px;
   background-color: var(--secondary-background);
@@ -166,6 +171,66 @@ body {
   padding: 0 15px 0 0;
   color: var(--dark-text);
   cursor: pointer;
+}
+
+.theme {
+  display: flex;
+}
+#nav-mob {
+  z-index: 5;
+  background-color: var(--secondary-background);
+  width: 280px;
+  height: 100%;
+  display: flex;
+  top: 60px;
+  position: fixed;
+  flex-direction: column;
+  left: -100%;
+}
+
+#nav-mob a {
+  padding: 30px;
+  margin: 0 8px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--dark-text);
+  background-color: #1fd1f9;
+  background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  /*Chrome*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /*Mozilla*/
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  /*Microsoft*/
+  -ms-background-clip: text;
+  -ms-text-fill-color: transparent;
+  /*Opera*/
+  -o-background-clip: text;
+  -o-text-fill-color: transparent;
+  background-clip: text;
+}
+
+#nav-mob.navmob-active > i {
+  font-size: 20px;
+  padding-right: 10px;
+}
+#nav-mob.navmob-active {
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
+
+  animation: showMenu 400ms ease forwards;
+}
+
+@keyframes showMenu {
+  to {
+    left: 0;
+  }
+}
+.menu {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
 }
 
 /*   NAV STYLING ENDS  */
@@ -356,6 +421,52 @@ body {
   margin-left: 60%;
 }
 
+footer {
+  background-color: var(--card-background);
+  border-top: 1px solid var(--shadow);
+  color: var(--dark-text);
+}
+#footer-details {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.social-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.social-media > h3 {
+  margin-bottom: 10px;
+}
+
+.social-media > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.social-media > ul > li {
+  display: flex;
+  flex-direction: column;
+  margin: 6px 25px 6px 0;
+}
+
+.social-media > ul > li > a > i {
+  padding-top: 8px;
+}
+
+#end {
+  padding-top: 15px;
+  text-align: center;
+}
 /*=========================== MEDIA QUERIES TABLETS===============================*/
 
 @media screen and (max-width: 925px) {
@@ -382,6 +493,10 @@ body {
     top: 0px;
     text-align: center;
   }
+
+  .nav-items a {
+    font-size: 14px;
+  }
 }
 
 /*=========================== MEDIA QUERIES MOBILES===============================*/
@@ -406,6 +521,20 @@ body {
     text-align: center;
     font-size: 12px;
   }
+
+  .nav-items a {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    margin-right: 10px;
+    color: var(--dark-text);
+  }
+
+  .social-media > ul {
+    flex-direction: column;
+  }
 }
 
 /*=========================== MEDIA QUERIES SMALL MOBILES===============================*/
@@ -428,6 +557,10 @@ body {
     text-align: center;
 
     font-size: 18px;
+  }
+
+  .menu {
+    margin-right: 8px;
   }
 }
 

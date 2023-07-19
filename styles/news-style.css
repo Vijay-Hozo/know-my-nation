@@ -18,6 +18,13 @@
     #aa00ff 37%,
     #cc4499 100%
   );
+
+  --primary-backgorund: #f5f5f5;
+  --secondary-background: #f9f9f9;
+  --card-background: rgba(249, 249, 249, 0.6);
+  --dark-text: #03001c;
+  --card-border: #f9f9f9;
+  --shadow: rgba(17, 12, 46, 0.15);
 }
 * {
   padding: 0;
@@ -32,6 +39,7 @@ body {
 h1 {
   text-align: center;
   margin-bottom: 30px;
+  color: var(--dark-text);
 }
 
 p {
@@ -247,4 +255,32 @@ main {
 
 .news-source {
   margin-block: 12px;
+}
+
+/*==================MEDIA QURIES TABLETS===============*/
+
+@media screen and (max-width: 780px) {
+  .nav-links {
+    display: none;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .search-bar {
+    justify-content: flex-end;
+  }
+  .search-bar > input {
+    align-self: flex-end;
+    width: 140px;
+  }
+
+  .search-bar > button {
+    width: 18px;
+  }
 }

@@ -138,7 +138,7 @@ SIDE BAR SLYLING
   flex-direction: column;
   justify-content: space-between;
   width: 400px;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   background-color: var(--secondary-background); /*SIDEBAR COLOR*/
   box-shadow: rgba(50, 50, 93, 0.5) 0px 13px 27px -5px,
@@ -362,7 +362,8 @@ Main BAR SLYLING
     "c1 c1 c2"
     "c3 c4 c4"
     "c6 c6 c5"
-    "c7 c7 c8";
+    "c7 c7 c8"
+    "c9 c9 c9";
 }
 
 .card {
@@ -409,6 +410,9 @@ Main BAR SLYLING
   grid-area: c8;
 }
 
+.card:nth-child(9) {
+  grid-area: c9;
+}
 .card h2 {
   margin-bottom: 10px;
 }
@@ -461,6 +465,18 @@ Main BAR SLYLING
   justify-content: space-between;
   margin-left: 15px;
   margin-right: 15px;
+}
+
+.education-card-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.education-card-info h2 {
+  font-size: 16px;
 }
 
 /*=============================MEDIA QUERIES TABLETS================================*/

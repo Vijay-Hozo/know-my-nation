@@ -1,16 +1,5 @@
-function showstate(stateId) {
-  fetch("states.json")
-    .then((response) => response.json())
-    .then((data) => {
-      const statefilter = data.find((item) => item.stateId === stateId);
-
-      document.getElementById("statename-index").innerHTML =
-        statefilter.basic_information.name;
-    });
-}
-
-function filterData(stateId) {
-  fetch("states.json")
+function filterDatatable(stateId) {
+  fetch("/states.json")
     .then((response) => response.json())
     .then((data) => {
       const filteredData = data.find((item) => item.stateId === stateId);

@@ -34,6 +34,12 @@ window.addEventListener("DOMContentLoaded", () => {
   const state_industries = queryParams.get("state_industries");
   const state_festivals = queryParams.get("state_festivals");
 
+  const state_school = queryParams.get("state_school");
+  const state_primary = queryParams.get("state_primary");
+  const state_upper = queryParams.get("state_upper");
+  const state_secondary = queryParams.get("state_secondary");
+  const state_higher = queryParams.get("state_higher");
+
   //...Receiving Data Ends
 
   document.title = state_name;
@@ -58,6 +64,12 @@ window.addEventListener("DOMContentLoaded", () => {
   document.getElementById("statehistory").textContent = state_history;
   // document.getElementById("festival-list").textContent = state_festivals;
   document.getElementById("websitelink").href = state_website;
+
+  document.getElementById("stateschool").textContent = state_school;
+  document.getElementById("stateprimary").textContent = state_primary;
+  document.getElementById("stateupper").textContent = state_upper;
+  document.getElementById("statesecondary").textContent = state_secondary;
+  document.getElementById("statehigher").textContent = state_higher;
 
   const carouselImage = document.getElementById("carousel-image");
 

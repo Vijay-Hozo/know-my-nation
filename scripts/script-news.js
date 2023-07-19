@@ -9,7 +9,7 @@ function reload() {
 
 async function fetchNews(query) {
   const res = await fetch(
-    `https://newsapi.org/v2/top-headlines?country=in&q=${query}&apiKey=${API_KY2}`
+    `https://newsapi.org/v2/top-headlines?country=in&q=${query}&apiKey=${AP_KEY2}`
   );
   const data = await res.json();
   console.log(data);

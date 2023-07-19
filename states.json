@@ -41,8 +41,11 @@
         "emblem": "Gopuram"
       },
       "climate": "Tropical",
-      "Schools": "100",
-      "Colleges": "100",
+      "state_school": 58801,
+      "state_primary": 35062,
+      "state_upper": 9243,
+      "state_secondary": 5499,
+      "state_higher": 8997,
       "major_festivals": ["Pongal", "Diwali", "Navaratri", "Tamil New Year"],
       "motto": "வாழ்க்கை வளர்க்கை தமிழர்க்கே (Life Prosperity for Tamils",
       "state_song": "தமிழ் தேசிய மாலை (Tamil Thai Valthu)"
@@ -94,6 +97,11 @@
         "emblem": "Ashoka emblem"
       },
       "climate": "Tropical, Semi-arid",
+      "state_school": 109605,
+      "state_primary": 51152,
+      "state_upper": 29841,
+      "state_secondary": 17741,
+      "state_higher": 10871,
       "major_festivals": [
         "Ganesh Chaturthi",
         "Diwali",
@@ -144,6 +152,11 @@
         "emblem": "Royal Bengal Tiger"
       },
       "climate": "Semi-Arid",
+      "state_school": 106373,
+      "state_primary": 38983,
+      "state_upper": 35984,
+      "state_secondary": 10775,
+      "state_higher": 20631,
       "major_festivals": ["Diwali", "Holi", "Teej", "Gangaur", "Pushkar Fair"],
       "motto": "सत्यमेव जयते (Truth Alone Triumphs)",
       "state_song": "रंग रंगीलो राजस्थान (Rang Rangilo Rajasthan)"
@@ -191,6 +204,11 @@
         "emblem": "Coconut tree"
       },
       "climate": "Tropical",
+      "state_school": 16240,
+      "state_primary": 6812,
+      "state_upper": 4515,
+      "state_secondary": 1941,
+      "state_higher": 2972,
       "major_festivals": [
         "Onam",
         "Vishu",
@@ -249,6 +267,11 @@
         "emblem": "Ashoka Pillar"
       },
       "climate": "Subtropical",
+      "state_school": 23726,
+      "state_primary": 9716,
+      "state_upper": 5423,
+      "state_secondary": 3009,
+      "state_higher": 5578,
       "major_festivals": ["Holi", "Baisakhi", "Diwali", "Teej"],
       "motto": "हरियाणा गोल्डेन जुबली वर्ष (Haryana Golden Jubilee Year)",
       "state_song": "हरियाणवी रंगोली (Haryanvi Rangoli)"
@@ -305,6 +328,11 @@
         "emblem": "Ashoka Chakra"
       },
       "climate": "Tropical",
+      "state_school": 61948,
+      "state_primary": 38430,
+      "state_upper": 8477,
+      "state_secondary": 11877,
+      "state_higher": 3164,
       "major_festivals": ["Sankranti", "Ugadi", "Dasara", "Diwali"],
       "motto": "सत्यमेव जयते (Truth Alone Triumphs)",
       "state_song": "मांगलमुर्ति वंदे (Mangalamurti Vande)"
@@ -361,6 +389,11 @@
         "emblem": "Yellow Orchid"
       },
       "climate": "Subtropical",
+      "state_school": 3603,
+      "state_primary": 1847,
+      "state_upper": 1273,
+      "state_secondary": 319,
+      "state_higher": 164,
       "major_festivals": ["Losar", "Sangken", "Si-Donyi", "Mopin"],
       "motto": "सत्यमेव जयते (Truth Alone Triumphs)",
       "state_song": "ओ आरुणाचल (O Arunachal)"
@@ -412,6 +445,11 @@
         "emblem": "Lion Capital of Ashoka"
       },
       "climate": "Subtropical",
+      "state_school": 93165,
+      "state_primary": 42505,
+      "state_upper": 38185,
+      "state_secondary": 3855,
+      "state_higher": 8620,
       "major_festivals": [
         "Chhath Puja",
         "Bihar Diwas",
@@ -473,6 +511,11 @@
         "emblem": "Lion Capital of Ashoka"
       },
       "climate": "Subtropical",
+      "state_school": 125582,
+      "state_primary": 62413,
+      "state_upper": 45106,
+      "state_secondary": 8306,
+      "state_higher": 9757,
       "major_festivals": [
         "Navratri",
         "Diwali",
@@ -533,6 +576,11 @@
         "emblem": "Aijal Peak"
       },
       "climate": "Subtropical",
+      "state_school": 3911,
+      "state_primary": 1481,
+      "state_upper": 1519,
+      "state_secondary": 706,
+      "state_higher": 205,
       "major_festivals": [
         "Chapchar Kut",
         "Mim Kut",
@@ -588,6 +636,11 @@
         "emblem": "Shillong Peak"
       },
       "climate": "Subtropical",
+      "state_school": 14600,
+      "state_primary": 9223,
+      "state_upper": 3529,
+      "state_secondary": 1462,
+      "state_higher": 386,
       "major_festivals": [
         "Nongkrem Dance",
         "Wangala Festival",
@@ -649,6 +702,11 @@
         "emblem": "Lion"
       },
       "climate": "Semi-arid",
+      "state_school": 27701,
+      "state_primary": 13536,
+      "state_upper": 4642,
+      "state_secondary": 4186,
+      "state_higher": 5337,
       "major_festivals": ["Baisakhi", "Lohri", "Gurupurab", "Hola Mohalla"],
       "motto": "ਸੋਭਾ ਮਿਟੀ ਦੀ (Glory of Soil)",
       "state_song": "ਜਨਗਣਮਨ (Jana Gana Mana)"
@@ -704,6 +762,11 @@
         "emblem": "Kanchenjunga"
       },
       "climate": "Temperate",
+      "state_school": 1259,
+      "state_primary": 685,
+      "state_upper": 307,
+      "state_secondary": 150,
+      "state_higher": 117,
       "major_festivals": [
         "Losar",
         "Saga Dawa",
@@ -765,6 +828,11 @@
         "emblem": "Kakatiya Kala Thoranam"
       },
       "climate": "Tropical",
+      "state_school": 43083,
+      "state_primary": 20711,
+      "state_upper": 7688,
+      "state_secondary": 12045,
+      "state_higher": 2639,
       "major_festivals": [
         "Bathukamma",
         "Bonalu",
@@ -818,6 +886,11 @@
         "emblem": "Lion Capital of Ashoka"
       },
       "climate": "Tropical",
+      "state_school": 4929,
+      "state_primary": 2522,
+      "state_upper": 1226,
+      "state_secondary": 702,
+      "state_higher": 479,
       "major_festivals": [
         "Durga Puja",
         "Kharchi Puja",
@@ -879,6 +952,11 @@
         "emblem": "Lion Capital of Ashoka"
       },
       "climate": "Humid subtropical",
+      "state_school": 258054,
+      "state_primary": 138078,
+      "state_upper": 86430,
+      "state_secondary": 12783,
+      "state_higher": 20763,
       "major_festivals": ["Diwali", "Holi", "Eid", "Kumbh Mela"],
       "motto": "सत्यमेव जयते (Truth Alone Triumphs)",
       "state_song": "उत्तर प्रदेश के जन (Uttar Pradesh Ke Jan)"
@@ -934,6 +1012,11 @@
         "emblem": "Trishul"
       },
       "climate": "Subtropical to alpine",
+      "state_school": 22815,
+      "state_primary": 13404,
+      "state_upper": 5426,
+      "state_secondary": 1407,
+      "state_higher": 2578,
       "major_festivals": [
         "Kumaoni Holi",
         "Ganga Dussehra",
@@ -995,6 +1078,11 @@
         "emblem": "Lion Capital of Ashoka"
       },
       "climate": "Tropical",
+      "state_school": 94744,
+      "state_primary": 75299,
+      "state_upper": 8735,
+      "state_secondary": 321,
+      "state_higher": 7419,
       "major_festivals": [
         "Durga Puja",
         "Kali Puja",
@@ -1056,6 +1144,11 @@
         "emblem": "Lion Capital of Ashoka"
       },
       "climate": "Tropical to arid",
+      "state_school": 53851,
+      "state_primary": 13827,
+      "state_upper": 27260,
+      "state_secondary": 4638,
+      "state_higher": 8126,
       "major_festivals": [
         "Navratri",
         "Kite Festival (Uttarayan)",
@@ -1118,6 +1211,11 @@
         "emblem": "One-horned Rhinoceros"
       },
       "climate": "Subtropical",
+      "state_school": 60859,
+      "state_primary": 40482,
+      "state_upper": 10672,
+      "state_secondary": 7290,
+      "state_higher": 2415,
       "major_festivals": [
         "Bihu",
         "Durga Puja",
@@ -1173,6 +1271,11 @@
         "emblem": "Lion"
       },
       "climate": "Tropical",
+      "state_school": 56512,
+      "state_primary": 32723,
+      "state_upper": 16442,
+      "state_secondary": 2737,
+      "state_higher": 4610,
       "major_festivals": [
         "Bastar Dussehra",
         "Rajim Kumbh Mela",
@@ -1234,6 +1337,11 @@
         "emblem": "Coconut tree"
       },
       "climate": "Tropical monsoon",
+      "state_school": 1510,
+      "state_primary": 892,
+      "state_upper": 75,
+      "state_secondary": 420,
+      "state_higher": 123,
       "major_festivals": [
         "Carnival",
         "Ganesh Chaturthi",
@@ -1290,6 +1398,11 @@
         "emblem": "Snow Leopard"
       },
       "climate": "Alpine",
+      "state_school": 18028,
+      "state_primary": 11085,
+      "state_upper": 2677,
+      "state_secondary": 1728,
+      "state_higher": 2538,
       "major_festivals": ["Dussehra", "Baisakhi", "Lohri", "Diwali"],
       "motto": "हिमाचल सर्वहितै रहितम् (Himachal Sarvehitam Rahitam)",
       "state_song": "हिमाचल गीत (Himachal Geet)"
@@ -1341,6 +1454,11 @@
         "emblem": "Ashoka Chakra"
       },
       "climate": "Subtropical",
+      "state_school": 44855,
+      "state_primary": 23706,
+      "state_upper": 16201,
+      "state_secondary": 3191,
+      "state_higher": 1757,
       "major_festivals": ["Sarhul", "Durga Puja", "Eid-ul-Fitr", "Holi"],
       "motto": "जहाँ सोच वहाँ शक्ति (Where There is a Will, There is a Way)",
       "state_song": "जहन्दा ऊच नाचे रे (Jhanda Ooncha Rahe Hamara)"
@@ -1392,6 +1510,11 @@
         "emblem": "Gandaberunda"
       },
       "climate": "Tropical and Subtropical",
+      "state_school": 76450,
+      "state_primary": 24470,
+      "state_upper": 30924,
+      "state_secondary": 15385,
+      "state_higher": 5671,
       "major_festivals": ["Makara Sankranti", "Navaratri", "Ugadi", "Dasara"],
       "motto": "सत्यमेव जयते (Truth Alone Triumphs)",
       "state_song": "जय भारतीय जननी जन्मभूमिः (Jaya Bharati Janani Janmabhoomi)"
@@ -1442,6 +1565,11 @@
         "emblem": "Kangla Sha"
       },
       "climate": "Subtropical",
+      "state_school": 4617,
+      "state_primary": 2422,
+      "state_upper": 966,
+      "state_secondary": 958,
+      "state_higher": 271,
       "major_festivals": [
         "Lai Haraoba",
         "Kang Chingba",
@@ -1497,6 +1625,11 @@
         "emblem": "Mithun"
       },
       "climate": "Subtropical",
+      "state_school": 2718,
+      "state_primary": 1157,
+      "state_upper": 787,
+      "state_secondary": 576,
+      "state_higher": 198,
       "major_festivals": [
         "Hornbill Festival",
         "Moatsu Festival",
@@ -1553,6 +1686,11 @@
         "emblem": "Ashoka"
       },
       "climate": "Tropical",
+      "state_school": 62291,
+      "state_primary": 29326,
+      "state_upper": 21049,
+      "state_secondary": 9497,
+      "state_higher": 2419,
       "major_festivals": [
         "Rath Yatra",
         "Durga Puja",
@@ -1613,6 +1751,11 @@
         "emblem": "Plough and Three Pashmina Goats"
       },
       "climate": "Alpine",
+      "state_school": 28805,
+      "state_primary": 14824,
+      "state_upper": 9565,
+      "state_secondary": 3150,
+      "state_higher": 1266,
       "major_festivals": [
         "Eid-ul-Fitr",
         "Diwali",
@@ -1673,6 +1816,11 @@
         "emblem": "Ashoka Chakra"
       },
       "climate": "Tropical",
+      "state_school": 5619,
+      "state_primary": 2594,
+      "state_upper": 826,
+      "state_secondary": 357,
+      "state_higher": 1842,
       "major_festivals": ["Diwali", "Holi", "Eid", "Raksha Bandhan"],
       "motto": "सत्यमेव जयते (Truth Alone Triumphs)",
       "state_song": "Vande Mataram"
@@ -1723,6 +1871,11 @@
         "emblem": "Lion"
       },
       "climate": "Tropical",
+      "state_school": 460,
+      "state_primary": 184,
+      "state_upper": 177,
+      "state_secondary": 45,
+      "state_higher": 54,
       "major_festivals": ["Diwali", "Ganesh Chaturthi", "Holi", "Navratri"],
       "motto": "श्रमेव जयते (Work alone triumphs)",
       "state_song": ""
@@ -1777,6 +1930,11 @@
         "emblem": "Open Hand Monument"
       },
       "climate": "Subtropical",
+      "state_school": 233,
+      "state_primary": 21,
+      "state_upper": 39,
+      "state_secondary": 71,
+      "state_higher": 102,
       "major_festivals": ["Baisakhi", "Diwali", "Holi", "Chandigarh Carnival"],
       "motto": "भगवान विश्व रचनाहार (God is the creator of the universe)",
       "state_song": "Mere Pind Di Hawa"
@@ -1827,6 +1985,11 @@
         "emblem": "Map of Andaman and Nicobar Islands"
       },
       "climate": "Tropical",
+      "state_school": 416,
+      "state_primary": 218,
+      "state_upper": 76,
+      "state_secondary": 53,
+      "state_higher": 69,
       "major_festivals": [
         "Island Tourism Festival",
         "Subhash Mela",
@@ -1881,6 +2044,11 @@
         "emblem": "Puducherry Emblem"
       },
       "climate": "Tropical",
+      "state_school": 736,
+      "state_primary": 275,
+      "state_upper": 74,
+      "state_secondary": 190,
+      "state_higher": 197,
       "major_festivals": ["Pongal", "Bastille Day", "Diwali", "Christmas"],
       "motto": "जयन्तो धर्मस्तयोध्या (Victory is in Righteousness)",
       "state_song": "தமிழ்த்தாய் வாழ்த்து (Tamizh Thai Vazhthu)"
@@ -1931,6 +2099,11 @@
         "emblem": "Double-humped Camel"
       },
       "climate": "Cold Desert",
+      "state_school": 978,
+      "state_primary": 379,
+      "state_upper": 437,
+      "state_secondary": 112,
+      "state_higher": 50,
       "major_festivals": [
         "Hemis Festival",
         "Losar",
@@ -1981,6 +2154,11 @@
         "emblem": "Lighthouse"
       },
       "climate": "Tropical",
+      "state_school": 38,
+      "state_primary": 16,
+      "state_upper": 9,
+      "state_secondary": 0,
+      "state_higher": 13,
       "major_festivals": ["Eid-ul-Fitr", "Milad-un-Nabi", "Bakrid", "Onam"],
       "motto": "सुखीन्त भवन्तु (May all be happy)",
       "state_song": "Lakshadweep Anthem"
