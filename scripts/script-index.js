@@ -21,6 +21,14 @@ function filterData(stateId) {
 
       queryParams.set("state_name", filteredData.basic_information.name);
       queryParams.set("state_imgs", JSON.stringify(filteredData.images));
+      queryParams.set(
+        "freedom_imgs",
+        JSON.stringify(filteredData.freedom_images)
+      );
+      queryParams.set(
+        "freedom_names",
+        JSON.stringify(filteredData.freedomFightersNames)
+      );
       queryParams.set("state_maplink", filteredData.statemapurl);
 
       queryParams.set("state_capital", filteredData.basic_information.capital);
@@ -65,11 +73,6 @@ function filterData(stateId) {
       queryParams.set(
         "state_song",
         filteredData.culture_and_symbols.state_song
-      );
-
-      queryParams.set(
-        "state_climate",
-        filteredData.culture_and_symbols.climate
       );
 
       queryParams.set(

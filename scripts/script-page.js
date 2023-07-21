@@ -12,6 +12,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const state_name = queryParams.get("state_name");
   const state_imgs = queryParams.get("state_imgs");
+  const freedom_imgs = queryParams.get("freedom_imgs");
+  const freedom_names = queryParams.get("freedom_names");
 
   const state_maplink = queryParams.get("state_maplink");
   const state_capital = queryParams.get("state_capital");
@@ -28,7 +30,6 @@ window.addEventListener("DOMContentLoaded", () => {
   const state_flower = queryParams.get("state_flower");
   const state_motto = queryParams.get("state_motto");
   const state_song = queryParams.get("state_song");
-  const state_climate = queryParams.get("state_climate");
   const state_history = queryParams.get("state_history");
   const state_website = queryParams.get("state_website");
   const state_industries = queryParams.get("state_industries");
@@ -60,9 +61,7 @@ window.addEventListener("DOMContentLoaded", () => {
   document.getElementById("stateflower").textContent = state_flower;
   document.getElementById("motto").textContent = state_motto;
   document.getElementById("statesong").textContent = state_song;
-  document.getElementById("stateclimate").textContent = state_climate;
   document.getElementById("statehistory").textContent = state_history;
-  // document.getElementById("festival-list").textContent = state_festivals;
   document.getElementById("websitelink").href = state_website;
 
   document.getElementById("stateschool").textContent = state_school;
@@ -72,6 +71,7 @@ window.addEventListener("DOMContentLoaded", () => {
   document.getElementById("statehigher").textContent = state_higher;
 
   const carouselImage = document.getElementById("carousel-image");
+  const carouselImage1 = document.getElementById("carousel1-image");
 
   const indus_arr = JSON.parse(state_industries);
 
@@ -90,6 +90,7 @@ window.addEventListener("DOMContentLoaded", () => {
     ptag1.innerHTML = element;
     p1_container.appendChild(ptag1);
   });
+
   const images = JSON.parse(state_imgs);
   let currentIndex = 0;
   function changeImage() {
@@ -105,4 +106,21 @@ window.addEventListener("DOMContentLoaded", () => {
   // function toggleopenclose() {
 
   // }
+
+  const freedomnamesarr = JSON.parse(freedom_names);
+
+  const images1 = JSON.parse(freedom_imgs);
+  let currentIndex1 = 0;
+  function changeImage1() {
+    carouselImage1.src = images1[currentIndex1];
+    const freedom_name_container = document.getElementById("freedomfighters");
+    freedom_name_container.textContent = freedomnamesarr[currentIndex1];
+    [currentIndex1];
+    currentIndex1 = (currentIndex1 + 1) % images1.length;
+  }
+
+  changeImage1();
+
+  // Change image every 3 seconds
+  setInterval(changeImage1, 3000);
 });

@@ -91,7 +91,7 @@
 
         for (var i = 0; i < data.length; i++) {
           value = value.toLowerCase();
-          var name = data[i].name.toLowerCase();
+          var name = data[i].name[0].toLowerCase();
 
           if (name.includes(value)) {
             filteredData.push(data[i]);
