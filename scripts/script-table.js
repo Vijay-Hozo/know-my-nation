@@ -1,5 +1,5 @@
 function filterDatatable(stateId) {
-  fetch("/states.json")
+  fetch("/states-2.json")
     .then((response) => response.json())
     .then((data) => {
       const filteredData = data.find((item) => item.stateId === stateId);

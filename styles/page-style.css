@@ -536,6 +536,19 @@ Main BAR SLYLING
     z-index: 5;
   }
 
+  .carousel_slide1 {
+    width: 400px;
+    overflow: hidden;
+    border-radius: 0 0 1rem 0;
+  }
+
+  .sidebar-bottom-p-shadow {
+    height: 50px;
+    width: 400px;
+    position: absolute;
+    border-radius: 0 0 1.5rem 0;
+  }
+
   .sidebar.active {
     box-shadow: 2px 2px 15px var(--dark1-background);
     animation: showMenu 400ms ease forwards;
@@ -615,5 +628,22 @@ Main BAR SLYLING
     top: 180px;
     font-size: 25px;
     z-index: 4;
+  }
+
+  .carousel_slide1 {
+    width: 300px;
+    overflow: hidden;
+    border-radius: 0 0 1.5rem 0;
+  }
+
+  .sidebar-bottom-p-shadow {
+    height: 50px;
+    width: 300px;
+    position: absolute;
+    border-radius: 0 0 1.5rem 0;
+  }
+
+  .freedom-fighter-names > h3 {
+    z-index: 5;
   }
 }

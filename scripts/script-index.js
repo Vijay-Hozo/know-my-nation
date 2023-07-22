@@ -1,5 +1,5 @@
 function showstate(stateId) {
-  fetch("states.json")
+  fetch("states-2.json")
     .then((response) => response.json())
     .then((data) => {
       const statefilter = data.find((item) => item.stateId === stateId);
@@ -10,7 +10,7 @@ function showstate(stateId) {
 }
 
 function filterData(stateId) {
-  fetch("states.json")
+  fetch("states-2.json")
     .then((response) => response.json())
     .then((data) => {
       const filteredData = data.find((item) => item.stateId === stateId);
@@ -22,12 +22,12 @@ function filterData(stateId) {
       queryParams.set("state_name", filteredData.basic_information.name);
       queryParams.set("state_imgs", JSON.stringify(filteredData.images));
       queryParams.set(
-        "freedom_imgs",
-        JSON.stringify(filteredData.freedom_images)
+        "tourist_imgs",
+        JSON.stringify(filteredData.tourist_image)
       );
       queryParams.set(
-        "freedom_names",
-        JSON.stringify(filteredData.freedomFightersNames)
+        "tourist_names",
+        JSON.stringify(filteredData.touristImageNames)
       );
       queryParams.set("state_maplink", filteredData.statemapurl);
 

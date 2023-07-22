@@ -12,8 +12,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const state_name = queryParams.get("state_name");
   const state_imgs = queryParams.get("state_imgs");
-  const freedom_imgs = queryParams.get("freedom_imgs");
-  const freedom_names = queryParams.get("freedom_names");
+  const tourist_imgs = queryParams.get("tourist_imgs");
+  const tourist_names = queryParams.get("tourist_names");
 
   const state_maplink = queryParams.get("state_maplink");
   const state_capital = queryParams.get("state_capital");
@@ -106,15 +106,16 @@ window.addEventListener("DOMContentLoaded", () => {
   // function toggleopenclose() {
 
   // }
+  console.log(tourist_names);
 
-  const freedomnamesarr = JSON.parse(freedom_names);
-
-  const images1 = JSON.parse(freedom_imgs);
+  const touristnamesarr = JSON.parse(tourist_names);
+  console.log(touristnamesarr);
+  const images1 = JSON.parse(tourist_imgs);
   let currentIndex1 = 0;
   function changeImage1() {
     carouselImage1.src = images1[currentIndex1];
-    const freedom_name_container = document.getElementById("freedomfighters");
-    freedom_name_container.textContent = freedomnamesarr[currentIndex1];
+    const tourist_name_container = document.getElementById("touristnames");
+    tourist_name_container.textContent = touristnamesarr[currentIndex1];
     [currentIndex1];
     currentIndex1 = (currentIndex1 + 1) % images1.length;
   }
